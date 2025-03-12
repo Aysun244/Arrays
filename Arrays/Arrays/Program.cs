@@ -46,16 +46,37 @@
 //    Console.WriteLine(sum);
 //}
 
-int[] arr = { 1, 3, 4, 6, 87, 23, 12 };
+//int[] arr = { 1, 3, 4, 6, 87, 23, 12 };
+//int result = 0;
+//for (int i=0;i<arr.Length;i++)
+//{
+//    if (arr[i] % 2 == 1 && arr[i] % 3 == 0)
+//        result++;
+//}
+//{
+//    Console.WriteLine("Say:"+result);
+//}
+
+int[] arr = { 2, 5, 8, 4, 56, 1, };
 int result = 0;
-for (int i=0;i<arr.Length;i++)
+for (int i = 0; i < arr.Length; i++)
 {
-    if (arr[i] % 2 == 1 && arr[i] % 3 == 0)
-        result++;
+    int num = arr[i];
+    if (num < 2)
+        continue;
+    for (int m = 2; m * m <= num; m++)
+    {
+        if (num % m == 0)
+        {
+
+            result++;
+            break;
+        }
+    }
 }
-{
-    Console.WriteLine("Say:"+result);
-}
+    {
+    Console.WriteLine(result);
+    }
 
 
 
